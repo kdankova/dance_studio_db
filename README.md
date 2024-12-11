@@ -80,6 +80,8 @@ VALUES
 ```
 
 ---
+![Dance Class Diagram](https://github.com/kdankova/dance_studio_db/blob/main/dance_studio_db_diagram.png)
+---
 
 ### Table Relationships and Their Uses
 
