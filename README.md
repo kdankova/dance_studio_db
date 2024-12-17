@@ -2,6 +2,8 @@
 
 ### Kate Dankova, 3rd year, group 11
 
+you can test the app [here](https://dancestudiodb.streamlit.app)
+
 # Step 1
 The directories store information about a dance studio, where instructors conduct classes in different dance styles.
 
