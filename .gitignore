@@ -1,0 +1,18 @@
+# created by virtualenv automatically
+*
+# PyCharm
+.idea/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+.mypy_cache
+.pytest_cache
+
+# OS X generated files.
+.DS_Store
+
+# env
+src/config/.env
+.venv
+.env
