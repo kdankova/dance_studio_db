@@ -6,38 +6,19 @@ from datetime import datetime
 import os
 from dotenv import load_dotenv
 
-#
-# # Загрузка переменных окружения из файла .env
-# load_dotenv()
-#
-# def get_db_connection():
-#     return psycopg2.connect(
-#         host=os.getenv("DB_HOST"),
-#         database=os.getenv("DB_NAME"),
-#         user=os.getenv("DB_USER"),
-#         password=os.getenv("DB_PASSWORD"),
-#         port=os.getenv("DB_PORT")
-#     )
-#
-#
-# # Функция для выполнения SQL-запросов
-# def run_query(query, params=None, fetch=True):
-#     with get_db_connection() as conn:
-#         with conn.cursor(cursor_factory=RealDictCursor) as cursor:
-#             cursor.execute(query, params)
-#             if fetch and query.strip().upper().startswith("SELECT"):
-#                 return cursor.fetchall()
-#             conn.commit()
 
-# Функция для подключения к базе данных
+# Загрузка переменных окружения из файла .env
+load_dotenv()
+
 def get_db_connection():
     return psycopg2.connect(
-        host=st.secrets["database"]["host"],
-        database=st.secrets["database"]["name"],
-        user=st.secrets["database"]["user"],
-        password=st.secrets["database"]["password"],
-        port=st.secrets["database"]["port"]
+        host=os.getenv("DB_HOST"),
+        database=os.getenv("DB_NAME"),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD"),
+        port=os.getenv("DB_PORT")
     )
+
 
 # Функция для выполнения SQL-запросов
 def run_query(query, params=None, fetch=True):
@@ -47,6 +28,7 @@ def run_query(query, params=None, fetch=True):
             if fetch and query.strip().upper().startswith("SELECT"):
                 return cursor.fetchall()
             conn.commit()
+
 
 # Получение справочников
 def get_reference_data():

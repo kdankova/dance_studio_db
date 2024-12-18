@@ -15,4 +15,3 @@ __pycache__/
 # env
 src/config/.env
 .venv
-.env
